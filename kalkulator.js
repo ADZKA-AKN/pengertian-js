@@ -28,7 +28,8 @@ function hitung(ekspresi) {
 
     //Jika format ekspresi tidak valid, kembalikan pesan error
     if (!cocok) {
-        return "Format salah. Contoh: 10 + 5";
+        return "Format salah. Contoh: 10 + 5"
+        ;
     }
     // Ambil angka pertama dari hasil regex, konversi ke tipe number
     const a = parseFloat(cocok[1]);
