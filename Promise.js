@@ -1,0 +1,39 @@
+function ambilData() {
+  return new Promise((resolve, reject) => {
+    console.log("2. Proses ambil data...");
+
+    setTimeout(() => {
+      const sukses = true;
+
+      if (sukses) {
+        resolve("Data berhasil diambil"); // kirim ke .then()
+      } else {
+        reject("Gagal ambil data"); // kirim ke .catch()
+      }
+    }, 3000);
+  });
+}
+
+ambilData()
+  .then((hasil) => {
+    console.log(`Then: ${hasil}`); // nunggu resolve
+  })
+  .catch((error) => {
+    console.log(`Error: ${error}`);
+  });   
+
+//Real Case Promise (GET API)
+function getUser() {
+  console.log("2. Mulai fetch");
+
+  return fetch("https://jsonplaceholder.typicode.com/users/1")
+    .then((response) => response.json()); // convert ke JSON
+}
+
+getUser()
+  .then((data) => {
+    console.log(`Then: ${data.name}`); // nunggu hasil API
+  })
+  .catch((error) => {
+    console.log(`Error: ${error}`);
+  });
