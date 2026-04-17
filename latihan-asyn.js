@@ -1,23 +1,23 @@
 //latihan asyncronous
 
-// async function getusers() {
-//     try {
-//         const data = await fetch("https://jsonplaceholder.typicode.com/users");
+async function getusers() {
+    try {
+        const data = await fetch("https://jsonplaceholder.typicode.com/users");
 
-//         if (!data.ok) {
-//             throw new Error("Gagal mengambil data");
-//         }
+        if (!data.ok) {
+            throw new Error("Gagal mengambil data");
+        }
 
-//         const hasil = await data.json();//mengubah string ke json
-//         hasil.forEach(hasil2 => {
-//             console.log(hasil2.name);
-//         });
-//     } catch (error) {
-//         console.log(error.message);
-//     }
-// }
+        const hasil = await data.json();//mengubah string ke json
+        hasil.forEach(hasil2 => {
+            console.log(hasil2.name);
+        });
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
-// getusers();
+getusers();
 
 
 //soal 2
